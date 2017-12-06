@@ -1,0 +1,9 @@
+This in an input file with words in it. It also happens to have punctuation! 
+
+The word Dog occurs 4 times in this file dog
+
+
+
+!dog
+
+DOG

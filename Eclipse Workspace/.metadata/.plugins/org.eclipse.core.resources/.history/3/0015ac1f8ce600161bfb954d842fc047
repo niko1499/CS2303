@@ -1,0 +1,98 @@
+//Game.c --  Niko Gamarra
+
+#include "Life.h"
+
+void PlayOne(int width, int height, char **Old, char **New) {
+	int xScanMin, xScanMax, yScanMin, yScanMax;
+	int neighbors = 0;
+	for (int x = 0; x < width; x++) {
+		if (x == 0) {
+			xScanMin = 0;
+		} else {
+			xScanMin = -1;
+		}
+		if (x == width) {
+			xScanMax = 0;
+		} else {
+			xScanMax = 1;
+		}
+		for (int y = 0; y < height; y++) {
+			if (y == 0) {
+				yScanMin = 0;
+			} else {
+				yScanMin = -1;
+			}
+			if (y == height) {
+				yScanMax = 0;
+			} else {
+				yScanMax = 1;
+			}
+			for (int i = xScanMin; i < xScanMax; i++) {
+				for (int j = yScanMin; j < yScanMax; j++) {
+					if (Old[x + i][y + j] == "X") {
+						neighbors++;
+						if (Old[x][y] == "X")
+							neighbors--;
+					}
+				}
+			}
+		}
+		if (Old[y][x] == "O") {
+			if (neighbors == 3) {
+				New[y][x] = "X";
+			} else {
+				New[y][x] = "O";
+			}
+		} else {
+			if (neighbors == 2 || neighbors == 3) {
+				New[y][x] = Old[y][x];
+			} else {
+				New[y][x] = "O";
+			}
+
+		}
+
+	}
+
+	/*
+	 void PlayOne(unsigned int x, unsigned int y, int Old[][], int New[][]) {
+	 int rows = sizeof(new) / sizeof(new[0]);
+	 int columns = sizeof(new[0]) / rows;
+
+	 for (int y = 0; y < rows; y++) {
+	 for (int x = 0; x < columns; x++) {
+	 int neighbors = 0;
+	 if (Old[y - 1][x - 1])
+	 neighbors++;
+	 if (Old[y][x - 1])
+	 neighbors++;
+	 if (Old[y + 1][x - 1])
+	 neighbors++;
+	 if (Old[y - 1][x])
+	 neighbors++;
+	 if (Old[y + 1][x])
+	 neighbors++;
+	 if (Old[y - 1][x + 1])
+	 neighbors++;
+	 if (Old[y][x + 1])
+	 neighbors++;
+	 if (Old[y + 1][x + 1])
+	 neighbors++;
+	 if (Old[y][x] == 0) {
+	 if (neighbors == 3) {
+	 New[y][x] = 1;
+	 } else {
+	 New[y][x] = 0;
+	 }
+	 } else {
+	 if (neighbors == 2 || neighbors == 3) {
+	 New[y][x] = Old[y][x];
+	 } else {
+	 New[y][x] = 0;
+	 }
+
+	 }
+	 }
+	 }
+	 }
+	 */

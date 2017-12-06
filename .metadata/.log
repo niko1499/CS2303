@@ -1,0 +1,20 @@
+!SESSION 2017-02-01 16:24:28.778 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86_64
+
+!ENTRY org.eclipse.core.resources 4 77 2017-02-01 16:26:43.025
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2017-02-01 16:26:43.025
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-02-01 16:26:43.025
+!MESSAGE /home/ngamarra/CS2303/HW2 overlaps the location of another project: 'HW2'
+
+!ENTRY org.eclipse.core.resources 4 77 2017-02-01 16:28:28.640
+!MESSAGE Invalid project description.
+!SUBENTRY 1 unknown 0 0 2017-02-01 16:28:28.641
+!MESSAGE OK
+!SUBENTRY 1 org.eclipse.core.resources 4 77 2017-02-01 16:28:28.647
+!MESSAGE /home/ngamarra/CS2303/HW2 overlaps the location of another project: 'HW2'

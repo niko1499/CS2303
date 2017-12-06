@@ -1,0 +1,15 @@
+//life.h Niko Gamarra
+
+
+#ifndef LIFE_H
+#define LIFE_H
+#include <stdio.h>
+
+    /*int index_of_minimum(const int array[], int size);
+    int index_of_maximum(const int array[], int size);
+    void sort(int array[], int size);
+    void histogram(const int array[], int size);
+*/
+
+#endif
+

@@ -1,0 +1,13 @@
+//life.c -- Niko Gamarra
+#include <stdio.h>
+int printMonthName(int, int);
+void printDayHeading(void);
+int main(int argc, char * argc[]){
+	//set up variables
+	int x = argv[1];
+	int y = argv[2];
+	int gens = argv[3];
+
+	//prompt user for input
+	printf();
+}

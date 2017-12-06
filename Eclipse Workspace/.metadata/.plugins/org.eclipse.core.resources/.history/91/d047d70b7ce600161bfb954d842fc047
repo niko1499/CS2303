@@ -1,0 +1,11 @@
+//life.c -- Niko Gamarra
+#include <stdio.h>
+
+int main(int argc, char * argc[]){
+	//set up variables
+	int x = int atoi(argc[1]);
+	int y = argc[2];
+	int gens = argc[3];
+
+	FILE *fopen(char *filename, r);
+}

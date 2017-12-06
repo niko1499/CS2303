@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;qSim_nxgamarra/Queue.cpp&apos; to &apos;tellerQueue&apos;" description="Rename resource &apos;Queue.cpp&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Queue.cpp" name="tellerQueue" stamp="1486589502887" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;qSim_nxgamarra/tellerQueue&apos; to &apos;tellerQueue.cpp&apos;" description="Rename resource &apos;tellerQueue&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="tellerQueue" name="tellerQueue.cpp" stamp="1486589529444" updateReferences="true"/>
+</session>

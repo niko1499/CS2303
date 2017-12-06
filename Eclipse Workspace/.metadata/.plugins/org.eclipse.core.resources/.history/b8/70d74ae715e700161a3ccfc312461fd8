@@ -1,0 +1,13 @@
+/*
+ * Game.h
+ *
+ *  Created on: Jan 29, 2017
+ *      Author: ngamarra
+ */
+
+#ifndef GAME_H_
+#define GAME_H_
+
+void PlayGame(int x,int y, int gens, char **Old, char **New);
+void PlayOne(int width, int height, char **Old, char **New);
+#endif /* GAME_H_ */

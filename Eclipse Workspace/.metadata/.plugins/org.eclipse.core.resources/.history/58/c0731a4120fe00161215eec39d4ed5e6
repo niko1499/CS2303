@@ -1,0 +1,16 @@
+
+#ifndef ANT_H_
+#define ANT_H_
+namespace Org{
+class Ant:public Organism{
+public:
+	Ant();
+
+	int age;
+
+	const int maxAge=9;
+private:
+
+};
+}
+#endif /* ORGANISM_H_ */

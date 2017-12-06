@@ -1,0 +1,15 @@
+#ifndef DOODLEBUG_H_
+#define DOODLEBUG_H_
+namespace Org {
+class DoodleBug: public Organism {
+public:
+	DoodleBug();
+
+	int age;
+
+	const int maxAge = 3;
+private:
+
+};
+}
+#endif /* ORGANISM_H_ */

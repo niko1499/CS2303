@@ -1,0 +1,42 @@
+/*
+ * Event.h
+ * Created on: 2/12/17
+ * Author: Nikolas X. Gamarra
+ */
+
+#ifndef EVENT_H_
+#define EVENT_H_
+
+#include <cstdio>
+#include <cstdlib>
+
+class Event {
+public:
+	void InsertItem (long item);
+	long getSum(void);
+	void printReverseList(void);
+	void action(void);
+
+	Event();	//	constructor
+	~Event();	//	destructor
+
+private:
+	class listItem;
+	listItem *head;
+	long sumOfItems;
+
+	void printLastItems(listItem *p);
+
+	class listItem {	// an internal class
+	public:
+
+		const long payload;
+		listItem *next;
+
+		inline listItem(long item) : payload(item), next(NULL) {};
+
+	};	// class listItem
+
+};
+
+#endif /* EVENT_H_ */

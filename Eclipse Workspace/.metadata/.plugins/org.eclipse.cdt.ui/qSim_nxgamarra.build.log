@@ -1,0 +1,6 @@
+15:57:19 **** Clean-only build of configuration Default for project qSim_nxgamarra ****
+make clean 
+rm -f qSim.o tellerQueue.o eventQueue.o qSim
+
+15:57:19 Build Finished (took 242ms)
+

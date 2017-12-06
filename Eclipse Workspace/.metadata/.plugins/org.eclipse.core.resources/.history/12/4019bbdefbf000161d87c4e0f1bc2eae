@@ -1,0 +1,78 @@
+//============================================================================
+// Name        : qSim.cpp
+// Author      : Nikolas X. Gamarra
+// Version     :
+// Copyright   :
+// Description : Simulation of bank queue
+//============================================================================
+
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <cstdlib>
+
+#include "tellerQueue.h"
+#include "Event.h"
+//tellerQueue Q;
+
+Event E;
+
+int main(int argc, char *argv[]) {
+	if (argc < 5) { //make sure there are an ok amount of arguements
+		std::cout
+				<< "ERROR: Too few args.\nExpected: ./qSim #customers #tellers simulationTime averageServiceTime <seed>"
+				<< std::endl;
+
+		return 1;
+	} else if (argc > 6) {
+
+		std::cout
+				<< "ERROR: Too many args.\nExpected: ./qSim #customers #tellers simulationTime averageServiceTime <seed>"
+				<< std::endl;
+
+		return 1;
+	} else { //Here all arguments have been accepted: Proceed
+		int customers = atol(argv[1]);
+		int tellers = atol(argv[2]);
+		int simulationTime = atol(argv[3]);
+		float advServiceTime = atof(argv[4]);
+
+		tellerQueue *Qs = new tellerQueue[tellers];
+std::cout<<"t"<<tellers<<std::endl;
+		float simClock;
+		if (argc == 6) {
+			int seed = atoi(argv[5]);
+			std::cout << "Warning: rand number uses seed: " << seed
+					<< std::endl;
+
+			srand(seed);
+		} else {
+			srand (time(NULL));}
+		int x = 999;
+		float arrTime = simulationTime * rand() / float(RAND_MAX);
+		float serviceTime = 2 * advServiceTime * rand() / float(RAND_MAX);
+		//std::cout << "R:  " << serviceTime << std::endl;
+		Qs[0].addLast(222);
+		std::cout << "L0: " << Qs[0].getLength() << std::endl;
+		Qs[0].addLast(22211);
+		std::cout << "L0: " << Qs[0].getLength() << std::endl;
+		//std::cout << "list:" << Q.printReverseList(void) << std::endl;
+		//Qs[0].removeFirst();
+		std::cout << "L0: " << Qs[0].getLength() << std::endl;
+		//Qs[0].removeFirst();
+		std::cout << "L0: " << Qs[0].getLength() << std::endl;
+		Qs[1].addLast(222);
+		std::cout << "L1: " << Qs[1].getLength() << std::endl;
+		//Qs[1].addLast(22211);
+		std::cout << "L1: " << Qs[1].getLength() << std::endl;
+		std::cout << "S: " << Qs[0].shortestQueue(Qs) << std::endl;
+		//int RAND_MAX = time;
+		/*for (int i = 0; i < customers; i++) {
+		 float arrTime = simulationTime * rand() / float(66);
+		 E.InsertItem(arrTime);
+		 std::cout <<"%d ,arrTiem";
+		 }
+		 */
+	}
+	return EXIT_SUCCESS;
+}

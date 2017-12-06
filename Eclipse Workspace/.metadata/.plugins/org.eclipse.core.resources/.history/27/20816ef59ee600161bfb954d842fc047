@@ -1,0 +1,16 @@
+/*
+ * Board.h
+ *
+ *  Created on: Jan 29, 2017
+ *      Author: ngamarra
+ */
+
+#ifndef BOARD_H_
+#define BOARD_H_
+
+void PrintBoard(int width, int height, char **New);
+void PrintGenHeader(int width);
+int BoardsEqual(int width, int height, char **New, char **Old);
+int allDead(int x, int y,char **array);
+
+#endif /* BOARD_H_ */

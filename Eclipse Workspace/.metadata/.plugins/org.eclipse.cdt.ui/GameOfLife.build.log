@@ -1,0 +1,6 @@
+21:55:46 **** Incremental Build of configuration Default for project GameOfLife ****
+make all 
+make: Nothing to be done for 'all'.
+
+21:55:46 Build Finished (took 251ms)
+

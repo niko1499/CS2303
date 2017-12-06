@@ -1,0 +1,3 @@
+action(){//action method representing actionto be taken when customer or teller is at head of event queue
+
+}

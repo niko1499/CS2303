@@ -1,0 +1,6 @@
+16:40:20 **** Incremental Build of configuration Default for project Lab7 ****
+make all 
+g++ -Wall Lab7.o BinaryTree.o TreeNode.o -o Lab7
+
+16:40:21 Build Finished (took 540ms)
+

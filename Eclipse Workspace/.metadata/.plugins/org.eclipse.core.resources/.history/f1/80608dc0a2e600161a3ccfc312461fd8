@@ -1,0 +1,51 @@
+//life.c -- Niko Gamarra
+#include <stdio.h>
+#include <stdlib.h>
+#include "Life.h"
+
+char print, pause;
+int main(int argc, char * argv[]) {
+	if (argc < 5)
+		printf("ERROR: Too few args.");
+	//set up variables
+	int x, y, gens;
+	//printf(argc[0]);
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
+	gens = atoi(argv[3]);
+	print = atoi(argv[5]);
+	pause = atoi(argv[6]);
+	char *B[];
+	unsigned int i, j, k;
+	B = malloc(x * sizeof(int *));
+	if (B)
+		for (i = 0; i < x; i++) {
+			B[i] = malloc(y * sizeof(int));
+			if (!B[i])
+				exit(-1);
+			/* error */
+		}
+	FILE *input;
+	input = (fopen(argv[4], "r"));
+	if (!input) {
+		printf("ERROR: File not found.");
+	} else {
+
+	}
+	PlayGame(x, y, gens, Board);
+}
+
+int getPrint() {
+	if (print == "y" || print == "Y")
+		return 1;
+	else {
+		return 0;
+	}
+}
+int getPause() {
+	if (pause == "y" || pause == "Y")
+		return 1;
+	else {
+		return 0;
+	}
+}

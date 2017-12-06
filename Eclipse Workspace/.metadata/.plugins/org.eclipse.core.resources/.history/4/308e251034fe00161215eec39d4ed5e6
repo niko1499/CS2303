@@ -1,0 +1,90 @@
+//============================================================================
+// Name        : Organism.cpp
+// Author      : Nikolas X. Gamarra
+// Date		   : 2/22/17
+// Version     : 1
+// Copyright   : -
+// Description : Organism Simulation
+//============================================================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#include <iostream>
+#include <string>
+#include <cstring>
+
+#include "Organism.h"
+
+//namespace Org{
+/*
+ Organism::Organism(){
+
+ }*/
+//}
+void Ant::move(int grid, Organism* Board) {
+	int xScanMin, xScanMax, yScanMin, yScanMax;
+
+	for (int x = 0; x < grid; x++) {
+			//check if at x edge
+			if (x == 0) {
+				xScanMin = 0;
+			} else {
+				xScanMin = -1;
+			}
+			if (x == grid - 1) {
+				xScanMax = 0;
+			} else {
+				xScanMax = 1;
+			}
+			for (int y = 0; y < grid; y++) {
+				//check if at y edge
+				if (y == 0) {
+					yScanMin = 0;
+				} else {
+					yScanMin = -1;
+				}
+				if (y == grid - 1) {
+					yScanMax = 0;
+				} else {
+					yScanMax = 1;
+				}
+				//Run scan of neighbors
+				for (int i = xScanMin; i <= xScanMax; i++) {
+					for (int j = yScanMin; j <= yScanMax; j++) {
+						if (Old[x + i][y + j] == 'x') {
+							neighbors++;
+						}
+					}
+				}
+}
+void Ant::print(void) {
+	std::cout << "o";
+}
+int Ant::replicate(void) {
+	if (this->age == 3) {
+		age = 0;
+		return 1;
+	} else {
+		this->age++;
+		return 0;
+	}
+
+}
+void DoodleBug::move(void) {
+
+}
+void DoodleBug::print(void) {
+	std::cout << "x";
+}
+int DoodleBug::replicate(void) {
+	if (this->age == 3) {
+		age = 0;
+		return 1;
+	} else {
+		this->age++;
+		return 0;
+	}
+
+}
+

@@ -1,0 +1,28 @@
+//============================================================================
+// Name        : Rational.cpp
+// Author      : Nikolas X. Gamarra
+// Date		   : 2/15/17
+// Version     : 1
+// Copyright   : -
+// Description : Rational Number program
+//============================================================================
+#include <cstdio>
+#include <iostream>
+
+#include "Rational.h"
+
+Rational::tellerQueue() {
+	//head = NULL;
+	//length = 0;
+}	// tellerQueue::tellerQueue()
+
+Rational::~tellerQueue(void) {
+	/*listItem *p = head;
+
+	while (p) {
+		listItem *q = p->next;
+		delete p;
+		p = q;
+	}*/
+	return;
+}	//	tellerQueue::~tellerQueue(void)

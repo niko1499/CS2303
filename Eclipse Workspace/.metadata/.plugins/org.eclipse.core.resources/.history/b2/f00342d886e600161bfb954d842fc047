@@ -1,0 +1,70 @@
+//life.c -- Niko Gamarra
+#include <stdio.h>
+#include "Life.h"
+
+
+int main(int argc, char * argv[]) {
+	if (argc < 5)
+		printf("ERROR: Too few args.");
+	//set up variables
+	int k, x, y, gens;
+	printf(argc[0]);
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
+	gens = argv[3];
+	int *B[];
+	unsigned int i, j, k;
+	B = malloc(x * sizeof(int *));
+	if (B)
+		for (i = 0; i < x; i++) {
+			B[i] = malloc(y * sizeof(int));
+			if (!B[i])
+				exit(-1);
+			/* error */
+		}
+	int c;
+	FILE *input;
+	input = (fopen(argv[4], "r");
+	if (!input){
+		printf("ERROR: File not found.");
+	}else{
+		while((c=getc(input))!= EOF){
+				int x=0,y=0;
+				if(c="\n"){
+					x=0;
+					y++;
+				}
+				B[x][y]
+				x++;
+
+		}
+		fclose(input)
+	}
+
+	int c;
+
+
+
+	for (int i = 0; i < gens; i++) {
+
+		if (argv[5] == "y" || argv[5] == "Y") {
+			//print each gen
+			PrintGenHeader(width);
+			PrintBoard(width, height, *Aboard[]);
+
+			if (argv[6] == "y" || argv[6] == "Y") {
+				//pause between gens
+				printf("Press Any Key to Continue\n");
+				getchar();
+			}
+
+		} else {
+
+		}
+		/*if(//repeated pattern or all dead){
+				 *i=gens
+				 *}
+				 */
+	}
+
+}

@@ -1,0 +1,78 @@
+
+#include <cstdio>
+#include <iostream>
+
+#include "Event.h"
+
+Event::Event() {
+	head = NULL;
+	sumOfItems = 0;
+}	// SortedList::SortedList()
+
+Event::~Event(void) {
+	listItem *p = head;
+
+	while (!p) {
+		listItem *q = p -> next;
+		delete p;
+		p = q;
+	}
+
+	return;
+
+}	//	SortedList::~sortedList(void)
+
+
+void Event::InsertItem(long itemValue){
+
+	listItem *p = new listItem(itemValue);
+
+	if (!head) {
+		head = p;
+		sumOfItems = itemValue;
+		return;
+	}
+
+	else if (itemValue < head -> payload) {
+		p -> next = head;
+		head = p;
+	}
+
+	else {
+		listItem *q = head;
+		while ((q -> next) && (q -> next -> payload < itemValue))
+			q = q -> next;
+		p -> next = q -> next;
+		q -> next = p;
+	}
+
+	sumOfItems += itemValue;
+
+}	//	void SortedList::InsertItem(long itemValue)
+
+long Event::getSum(void) {
+	long checkSum = 0;
+	for (listItem *p = head; p; p = p -> next)
+		checkSum += p -> payload;
+	if (checkSum != sumOfItems)
+		throw checkSum;
+
+	return sumOfItems;
+}	// long SortedList::getSum(void)
+
+void Event::printReverseList(void){
+
+	printLastItems(head);
+	std::cout << std::endl;
+}	// void SortedList::printReverseList(void)
+
+void Event::printLastItems(listItem *p){
+
+	if (p -> next)
+		printLastItems(p -> next);
+	std::cout << p -> payload << " ";
+}	// void SortedList::printLastItems(listItem *p)
+
+void Event::action(void){//action method representing actionto be taken when customer or teller is at head of event queue
+
+}

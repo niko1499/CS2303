@@ -1,0 +1,17 @@
+//life.c -- Niko Gamarra
+#include <stdio.h>
+
+int main(int argc, char * argv[]){
+	if(argc<5)
+		printf("ERROR: Too few args.")
+	//set up variables
+	int k, x, y, gens;
+	printf(argc[0]);
+	x = atoi(argv[1]);
+	y = atoi(argv[2]);
+	gens = argv[3];
+
+	file=fopen(argv[4], "r");
+	if(!file)
+		printf("ERROR: File not found.")
+}

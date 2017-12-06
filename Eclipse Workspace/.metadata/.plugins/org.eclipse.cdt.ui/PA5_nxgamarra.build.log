@@ -1,0 +1,6 @@
+10:39:09 **** Clean-only build of configuration Default for project PA5_nxgamarra ****
+make clean 
+rm -f Rational.o PA5.o PA5
+
+10:39:10 Build Finished (took 261ms)
+

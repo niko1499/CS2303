@@ -1,0 +1,17 @@
+Script started on Wed 18 Jan 2017 04:19:38 PM EST
+]0;ngamarra@CS-2303-VirtualBox: ~/CS2303/Lab1/Lab1Files[01;32mngamarra@CS-2303-VirtualBox[00m:[01;34m~/CS2303/Lab1/Lab1Files[00m$ make clean
+rm -f sinewave.o intarray.o sinewave
+]0;ngamarra@CS-2303-VirtualBox: ~/CS2303/Lab1/Lab1Files[01;32mngamarra@CS-2303-VirtualBox[00m:[01;34m~/CS2303/Lab1/Lab1Files[00m$ make CFLAGS=-02
+gcc -02 -Wall -c intarray.c
+[01m[Kgcc:[m[K [01;31m[Kerror: [m[Kunrecognized command line option ‘[01m[K-02[m[K’
+makefile:24: recipe for target 'intarray.o' failed
+make: *** [intarray.o] Error 1
+]0;ngamarra@CS-2303-VirtualBox: ~/CS2303/Lab1/Lab1Files[01;32mngamarra@CS-2303-VirtualBox[00m:[01;34m~/CS2303/Lab1/Lab1Files[00m$ make
+gcc -g -Wall -c intarray.c
+gcc -g -Wall -c sinewave.c
+gcc -g -Wall sinewave.o intarray.o -lm -o sinewave 
+]0;ngamarra@CS-2303-VirtualBox: ~/CS2303/Lab1/Lab1Files[01;32mngamarra@CS-2303-VirtualBox[00m:[01;34m~/CS2303/Lab1/Lab1Files[00m$ makeC[K CFlag[K[K[KLAGS=-02
+make: 'sinewave' is up to date.
+]0;ngamarra@CS-2303-VirtualBox: ~/CS2303/Lab1/Lab1Files[01;32mngamarra@CS-2303-VirtualBox[00m:[01;34m~/CS2303/Lab1/Lab1Files[00m$ exit
+
+Script done on Wed 18 Jan 2017 04:20:30 PM EST

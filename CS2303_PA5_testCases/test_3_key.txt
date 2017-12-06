@@ -1,0 +1,12 @@
+1/2 f +	: Invalid input
+-99/100 0 /	: Invalid input
+1/2 2/4 == 1/2 +	: Invalid input
+11/13 17/19 > 23/29 <=	: Invalid input
+1/2 2/4 ==	: true
+1/3 + 3/4	: Invalid input
+0 99/100 *	: 0/1 (double 0)
+-99/100 2 +	: 101/100 (double 1.01)
+11/13 17/19 *	: 187/247 (double 0.757085)
+11/13 17/19 /	: 209/221 (double 0.945701)
+
+

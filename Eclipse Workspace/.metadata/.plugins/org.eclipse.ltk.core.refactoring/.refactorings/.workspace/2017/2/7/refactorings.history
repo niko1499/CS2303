@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;qSim_nxgamarra/qSim.h&apos;" deleteContents="false" description="Delete resource &apos;qSim_nxgamarra/qSim.h&apos;" element1="/qSim_nxgamarra/qSim.h" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1487008460817"/>&#x0A;<refactoring comment="Delete resource &apos;qSim_nxgamarra/Event.o&apos;" deleteContents="false" description="Delete resource &apos;qSim_nxgamarra/Event.o&apos;" element1="/qSim_nxgamarra/Event.o" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1487043808102"/>
+</session>

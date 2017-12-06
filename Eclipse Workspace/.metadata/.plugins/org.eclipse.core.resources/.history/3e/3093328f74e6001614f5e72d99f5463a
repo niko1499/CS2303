@@ -1,0 +1,50 @@
+//Game.c --  Niko Gamarra
+
+//PA1.c -- Niko Gamarra
+#include <stdio.h>
+int printMonthName(int, int);
+void printDayHeading(void);
+int main(void){
+        //set up variables
+        int x,y;
+        //prompt user for input
+        printf("Game of Life\n");
+        printf("Enter grid size: ");
+        scanf("%d %d",&x, &y);
+}
+void PlayOne ( unsigned int x, unsigned int y, int Old[][],int New[][]){
+        int rows = sizeof(new)/sizeof(new[0]);
+        int columns = sizeof(new[0])/rows;
+
+        for(int y=0; y<rows;y++){
+                for(int x=0; x<columns;x++){
+                        int neighbors=0;
+                        if(Old[y-1][x-1])
+                                neighbors++;
+                        if(Old[y][x-1])
+                                neighbors++;
+                        if(Old[y+1][x-1])
+                                neighbors++;
+                        if(Old[y-1][x])
+                                neighbors++;
+                        if(Old[y+1][x])
+                                neighbors++;
+                        if(Old[y-1][x+1])
+                                neighbors++;
+                        if(Old[y][x+1])
+                                neighbors++;
+                        if(Old[y+1][x+1])
+                                neighbors++;    
+                        if(Old[y][x]==0){
+                                if(neighbors==3){
+                                        New[y][x]=1;
+                                }else{
+                                        New[y][x]=0;
+                                }
+                        }else{
+                                if(neighbors==2||neighbors==3){
+                                        New[y][x]=Old[y][x];
+                                }else{
+                                        New[y][x]=0;
+                                }
+

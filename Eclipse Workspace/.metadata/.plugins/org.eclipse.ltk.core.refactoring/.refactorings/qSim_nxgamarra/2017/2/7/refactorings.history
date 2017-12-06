@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;qSim_nxgamarra/Queue.h&apos; to &apos;tellerQueue.h&apos;" description="Rename resource &apos;Queue.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="Queue.h" name="tellerQueue.h" stamp="1486871720158" updateReferences="true"/>
+</session>

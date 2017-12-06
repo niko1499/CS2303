@@ -1,0 +1,91 @@
+//Game.c --  Niko Gamarra
+
+#include "Life.h"
+#include "Board.h"
+#include "Game.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+
+void PlayGame(int x, int y, int gens, char **Old, char **New) {
+	//
+int i
+	for (i = 0; i < gens; i++) {
+		if (getPrint()) {
+			//print each gen
+
+			PrintGenHeader(x);
+
+			PrintBoard(x, y, New);
+			if (getPause()) {
+				//pause between gens
+				printf("Press Any Key to Continue\n");
+				getchar();
+			}
+		}
+
+		if ((allDead(x, y, New)) || (BoardsEqual(x, y, New, Old))) {
+			i = gens;
+
+			PlayOne(x,y,Old,New);
+		}
+	}
+	//print last gen
+
+	PrintGenHeader(x,i);
+
+	PrintBoard(x, y, Old);
+}
+void PlayOne(int width, int height, char **Old, char **New) {
+	int xScanMin, xScanMax, yScanMin, yScanMax;
+	int neighbors = 0;
+	for (int x = 0; x < width; x++) {
+		//check if at x edge
+		if (x == 0) {
+			xScanMin = 0;
+		} else {
+			xScanMin = -1;
+		}
+		if (x == width) {
+			xScanMax = 0;
+		} else {
+			xScanMax = 1;
+		}
+		for (int y = 0; y < height; y++) {
+			//check if at y edge
+			if (y == 0) {
+				yScanMin = 0;
+			} else {
+				yScanMin = -1;
+			}
+			if (y == height) {
+				yScanMax = 0;
+			} else {
+				yScanMax = 1;
+			}
+			//Run scan of neighbors
+			for (int i = xScanMin; i < xScanMax; i++) {
+				for (int j = yScanMin; j < yScanMax; j++) {
+					if (Old[x + i][y + j] == 'x')
+						neighbors++;
+				}
+			}
+			if (Old[x][y] == 'x')
+				neighbors--; //subtract self from neighbors
+			//logic for placing new cell survival/birth/death
+			if (Old[x][y] == 'o'||Old[x][y] == '0') {
+				if (neighbors == 3) {
+					New[x][y] = 'x';
+				} else {
+					New[x][y] = 'o';
+				}
+			} else {
+				if (neighbors == 2 || neighbors == 3) {
+					New[x][y] = Old[x][y];
+				} else {
+					New[x][y] = 'o';
+				}
+			}
+		}
+	}
+}

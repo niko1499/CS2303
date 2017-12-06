@@ -1,0 +1,139 @@
+Array
+
+Objects all of the same type stored contiguously under memory.
+dominant data structure in C
+Instant access to any element
+
+aray of ten elements
+a[0]-a[9]
+
+arrays can be of
+structs, unions, pointers, objects, ect
+
+0 based indexing
+
+un specified size, common in calls
+int c[]
+
+two dimension
+int d[20][10]
+[row][col]
+memory contigous row by row
+
+on dimensional arrays with 20 each in a 10 element array
+
+Last subscript varies the fastest
+
+loops for arrays
+
+for(count=0; rc!=EOF;count++)
+	rc=scanf("%f",&a[count]);
+
+&:
+
+CAUTION
+do not index outside an array
+could cause segmentation fault
+c does not check array bunds
+
+Array size may be determined at run-time for automatic
+can be inplicit/explicit
+Static/automatic
+static: run-time memory setup
+auto: allocates at { that includes it
+
+#define class_size 25
+const in nElements = 25;
+
+-----Arrays continued
+
+a[n*4];
+
+array initialization
+int a[5]={2,4,6);
+
+others will be zeros
+int days[]={4,2,1};
+will make nessecary size
+
+sizeof(ing)- bytes in each int
+sizeof(float) bytes in float
+sizeof(days) - bytes in that arra of day
+# of elements in days = (sizeof days)/sizeof(int)
+
+sizeof (type)
+sizeof variable
+
+--memory
+
+byte and 8 bit memory cell 0-255
+address number by which memory cell is identified
+short int 2 bytes
+int 2 or 4
+long 4 or 8 bytes
+float 4 bytes IEEE standard
+double 8 bytes ''
+
+almost always aligned to multiple of size in bytes
+
+address is first byte in sequence
+may be low or high orderbyte 
+big endian or little endian
+
+Pointers!
+A data value indicating the number of the first byte of another data object. 
+	also called an address or a location
+
+use in machine language to identify which data to access
+
+usually 2,4,8 bytes depending on machine
+
+Pointers used everywhere
+	interesting data structures, returing data, managing arrays
+
+& unary operator generates a pointer to x
+
+eg scanf("%d",&x);
+p=&c;
+& must be an l-value must be an object on the left of an assignment operator =
+
+* unary operator dereferences a pointer
+ie gets value pointed to
+*p refers to value contained in location c above
+*p=x+y; *p=*q; 
+
+int *p; - p is a pointer to an int
+
+double *q creat a ponter that can only point to doubles
+
+char **r; -pointer to a pointer to a char
+
+Read from right to left:
+const in *p;
+int * const q;
+const int * const r;
+
+int *p,*q;
+q=p+1;
+construct a pointer to the next integer after *p in memory assign it to q
+
+long int *p,*q;
+
+p++;q--;
+increment p to point to the next long int
+
+C never checks pointers are valid.
+
+Pointers and arrays same in c
+
+int A[10];
+int *p;
+
+type of a is for all practical purposes int *
+p=A is a legal assignment
+*p refers to A[0];
+*(p+n) refers to a[n];
+p= &A[5]; is the same as p=A+5;
+
+
+

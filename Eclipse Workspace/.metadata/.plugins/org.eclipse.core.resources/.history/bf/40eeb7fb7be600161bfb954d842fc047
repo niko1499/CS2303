@@ -1,0 +1,12 @@
+//life.c -- Niko Gamarra
+#include <stdio.h>
+
+int main(int argc, char * argc[]){
+	//set up variables
+	int x = argc[1];
+	int y = argc[2];
+	int gens = argc[3];
+
+	//prompt user for input
+	printf();
+}

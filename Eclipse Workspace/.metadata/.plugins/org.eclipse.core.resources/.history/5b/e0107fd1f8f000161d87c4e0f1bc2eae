@@ -1,0 +1,48 @@
+/*
+ * tellerQueue.h
+ * Nikolas X. Gamarra
+ * 2/11/17
+ */
+
+#ifndef TELLERQUEUE_H_
+#define TELLERQUEUE_H_
+
+#include <cstdio>
+#include <cstdlib>
+
+class tellerQueue {
+public:
+	void addLast(long item);
+	void removeFirst(void);
+	int getLength(void);
+	void printReverseList(void);
+	int shortestQueue(tellerQueue *Qs)
+
+	tellerQueue();	//	constructor
+	~tellerQueue();	//	destructor
+
+private:
+	class listItem;
+	listItem *head;
+	int length;
+
+	void printLastItems(listItem *p);
+
+
+	class listItem {	// an internal class
+	public:
+
+		const long payload;
+		listItem *next;
+
+		inline listItem(long item) :
+				payload(item), next(NULL) {
+		}
+		;
+
+	};
+	// class tellerqueue
+
+};
+
+#endif /* TELLERQUEUE */

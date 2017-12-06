@@ -1,0 +1,40 @@
+//life.c -- Niko Gamarra
+#include <stdio.h>
+#include <stdlib.h>
+FILE *input;
+
+int main(int argc, char * argv[]) {
+	if (argc < 5)
+		printf("ERROR: Too few args.");
+	//set up variables
+	int k, width, height, gens;
+	FILE * input;
+	printf(argc[0]);
+	width = atoi(argv[1]);
+	height = atoi(argv[2]);
+	char *ABoard[];
+	ABoard = malloc(x)
+	gens = argv[3];
+
+	input = fopen(argv[4], "r");
+	if (!input)
+		printf("ERROR: File not found.");
+
+	for (int i = 0; i < gens; i++) {
+		if (argv[5] == "y" || argv[5] == "Y") {
+			//print each gen
+			PrintGenHeader(width);
+			PrintBoard(width, height, *Aboard[]);
+
+			if (argv[6] == "y" || argv[6] == "Y") {
+				//pause between gens
+				printf("Press Any Key to Continue\n");
+				getchar();
+			}
+
+		} else {
+
+		}
+	}
+
+}

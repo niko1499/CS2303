@@ -1,0 +1,22 @@
+
+
+#ifndef BOARD_H_
+#define BOARD_H_
+
+#include <cstdio>
+#include <cstdlib>
+
+class Board {
+public:
+
+
+	Board(int width);	//	constructor
+	~Board();	//	destructor
+
+private:
+
+	// class
+
+};
+
+#endif /* BOARD */

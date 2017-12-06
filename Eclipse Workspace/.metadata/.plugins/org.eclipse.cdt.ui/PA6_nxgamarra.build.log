@@ -1,0 +1,6 @@
+17:26:19 **** Clean-only build of configuration Default for project PA6_nxgamarra ****
+make clean 
+rm -f Organism.o Board.o PA6.o PA6 Ant.o DoodleBug.o
+
+17:26:19 Build Finished (took 173ms)
+

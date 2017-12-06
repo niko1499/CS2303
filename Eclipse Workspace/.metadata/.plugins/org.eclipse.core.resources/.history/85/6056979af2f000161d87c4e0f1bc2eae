@@ -1,0 +1,77 @@
+/*
+ * tellerQueue.cpp
+ *  Created on: 2/7/17
+ *  Author: Nikolas X. Gamarra
+ */
+
+#include <cstdio>
+#include <iostream>
+
+#include "tellerQueue.h"
+
+tellerQueue::tellerQueue() {
+	head = NULL;
+	length = 0;
+}	// SortedList::SortedList()
+
+tellerQueue::~tellerQueue(void) {
+	listItem *p = head;
+
+	while (!p) {
+		listItem *q = p -> next;
+		delete p;
+		p = q;
+	}
+
+	return;
+
+}	//	SortedList::~sortedList(void)
+
+
+void tellerQueue::InsertItem(long itemValue){
+
+	listItem *p = new listItem(itemValue);
+if(!head){
+	head=p;
+	length++;
+}else{
+	listItem *q=head;
+	while(q->next)
+		q=q->next;
+	p->next=q->next;
+	q->next=p;
+
+/*
+}
+	if (!head) {
+		head = p;
+		length =1;
+		return;
+	}
+
+	else if (itemValue < head -> payload) {
+		p -> next = head;
+		head = p;
+	}
+
+	else {
+		listItem *q = head;
+		while ((q -> next) && (q -> next -> payload < itemValue))
+			q = q -> next;
+		p -> next = q -> next;
+		q -> next = p;
+	}
+*/
+	//sumOfItems += itemValue;
+
+}	//	void SortedList::InsertItem(long itemValue)
+
+int tellerQueue::getLength(void) {
+	for (listItem *p = head; p; p = p -> next)
+		length += 1;
+
+
+	return length;
+}	// long SortedList::getSum(void)
+
+

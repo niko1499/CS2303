@@ -1,0 +1,79 @@
+//============================================================================
+// Name        : Organism.cpp
+// Author      : Nikolas X. Gamarra
+// Date		   : 2/22/17
+// Version     : 1
+// Copyright   : -
+// Description : Organism Simulation
+//============================================================================
+#include <stdio.h>
+#include <stdlib.h>
+#include <errno.h>
+
+#include <iostream>
+#include <string>
+#include <cstring>
+
+#include "Organism.h"
+
+
+
+//namespace Org{
+/*
+Organism::Organism(){
+
+}*/
+//}
+
+void Ant::move(void) {
+	int moveDirection = rand() % 4; //generates 0, 1, 2, 3
+
+		// Try to move up, if not at an edge and empty spot
+	 	if (moveDirection == 0) {
+	 		if ((y > 0) && (world->getFromWorld(x, y-1) == NULL)) {
+			 world->setInWorld(x, y-1, world->getFromWorld(x, y));  // Move to new spot
+			 world->setInWorld(x, y, NULL);
+			 //enusre ant has correct coordinate y now
+			 y--;
+			}
+		}
+		// Try to move down
+		else if (moveDirection == 1) {
+			if ((y < MWS-1) && (world->getFromWorld(x, y+1) == NULL)) {
+			 world->setInWorld(x, y+1, world->getFromWorld(x, y));  // Move to new spot
+			 world->setInWorld(x, y, NULL);  // Set current spot to empty
+			 y++;void
+			}
+		}
+		// Try to move left
+		else if (moveDirection == 2) {
+			if ((x > 0) && (world->getFromWorld(x-1, y) == NULL)) {
+			 world->setInWorld(x-1, y, world->getFromWorld(x, y));  // Move to new spot
+			 world->setInWorld(x, y, NULL);  // Set current spot to empty
+			 x--;
+			}
+		}
+		// Try to move right
+		else {
+			if ((x < MWS-1) && (world->getFromWorld(x+1, y) == NULL)) {
+			 world->setInWorld(x+1, y, world->getFromWorld(x, y));  // Move to new spot
+			 world->setInWorld(x, y, NULL);  // Set current spot to empty
+			 x++;
+			}
+		}
+}
+void Ant::print(void){
+	std::cout<<"o";
+}
+int Ant::replicate(void){
+
+}
+void DoodleBug::move(void) {
+
+}
+void DoodleBug::print(void){
+	std::cout<<"x";
+}
+int DoodleBug::replicate(void){
+
+}

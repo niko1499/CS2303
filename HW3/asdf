@@ -1,0 +1,13 @@
+PA3 Output File
+Output File: asdf
+Input File 1: input.txt
+----------------------------------
+Unique Words and their frequencies: 
+   3 3dog
+   2 allcapstwice
+   1 file
+   1 input
+   1 niko's
+----------------------------------
+Distinct Words: 5
+Total Words: 8

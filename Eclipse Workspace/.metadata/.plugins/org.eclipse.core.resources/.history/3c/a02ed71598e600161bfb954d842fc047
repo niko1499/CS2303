@@ -1,0 +1,28 @@
+//Board.c Niko Gamarra
+#include <stdio.h>
+
+void PrintBoard(int width, int height, char **New) {
+	for (int y = 0; y < height; y++) {
+		for (int x = 0; x < width; x++)
+			printf(New[x][y]);
+	}
+}
+void PrintGenHeader(int width) {
+	static int gen;
+	gen++;
+
+	int printed = printf("--- Generation %d", gen);
+	for (int i = 0; i < (width - printed); i++) {
+		printf("-");
+	}
+	printf("\n");
+}
+int BoardsEqual(int width, int height, char **New, char **Old) {
+	for(int i=0; i<width;i++) {
+		for(int j=0; j<height;j++) {
+			if(New[i][j]!=Old[ij][])
+			return 0;
+		}
+	}
+	return 1;
+}

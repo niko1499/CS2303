@@ -1,0 +1,17 @@
+//life.h Niko Gamarra
+
+#ifndef LIFE_H
+#define LIFE_H
+
+
+int getPrint();
+int getPause();
+//void PlayOne(int width, int height, char Old[][], char New[][]);
+/*int index_of_minimum(const int array[], int size);
+ int index_of_maximum(const int array[], int size);
+ void sort(int array[], int size);
+ void histogram(const int array[], int size);
+ */
+
+#endif
+

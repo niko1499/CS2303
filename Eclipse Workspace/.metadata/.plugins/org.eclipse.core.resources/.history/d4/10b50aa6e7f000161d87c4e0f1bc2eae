@@ -1,0 +1,60 @@
+//============================================================================
+// Name        : qSim.cpp
+// Author      : Nikolas X. Gamarra
+// Version     :
+// Copyright   :
+// Description : Simulation of bank queue
+//============================================================================
+
+#include <cstdio>
+#include <cstdlib>
+#include <iostream>
+#include <cstdlib>
+
+#include "tellerQueue.h"
+#include "Event.h"
+tellerQueue Q;
+Event E;
+
+int main(int argc, char *argv[]) {
+	if (argc < 5) { //make sure there are an ok amount of arguements
+		std::cout
+				<< "ERROR: Too few args.\nExpected: ./qSim #customers #tellers simulationTime averageServiceTime <seed>"
+				<< std::endl;
+
+		return 1;
+	} else if (argc > 6) {
+
+		std::cout
+				<< "ERROR: Too many args.\nExpected: ./qSim #customers #tellers simulationTime averageServiceTime <seed>"
+				<< std::endl;
+
+		return 1;
+	} else { //Here all arguments have been accepted: Proceed
+		std::cout << "test" << std::endl;
+		int customers = atol(argv[1]);
+		int tellers = atol(argv[2]);
+		int simulationTime = atol(argv[3]);
+		float advServiceTime = atof(argv[4]);
+
+		float simClock;
+		if (argc == 5) {
+			int seed = atoi(argv[5]);
+			srand(seed);
+		} else {
+
+		}
+		int RAND_MAX=simulationTime;
+		float arrTime = simulationTime * rand()/float(RAND_MAX);
+
+		int simulationTime = time;
+		//int RAND_MAX = time;
+		/*for (int i = 0; i < customers; i++) {
+		 float arrTime = simulationTime * rand() / float(66);
+		 E.InsertItem(arrTime);
+		 std::cout <<"%d ,arrTiem";
+		 }
+		 */
+	}
+	return EXIT_SUCCESS;
+}

@@ -1,0 +1,109 @@
+/*
+ * tellerQueue.cpp
+ *  Created on: 2/7/17
+ *  Author: Nikolas X. Gamarra
+ */
+
+#include <cstdio>
+#include <iostream>
+
+#include "tellerQueue.h"
+
+tellerQueue::tellerQueue() {
+	head = NULL;
+	length = 0;
+}	// SortedList::SortedList()
+
+tellerQueue::~tellerQueue(void) {
+	listItem *p = head;
+
+	while (!p) {
+		listItem *q = p->next;
+		delete p;
+		p = q;
+	}
+
+	return;
+
+}	//	SortedList::~sortedList(void)
+
+void tellerQueue::addLast(long itemValue) {
+
+	listItem *p = new listItem(itemValue);
+	if (!head) {
+		head = p;
+		length++;
+	} else {
+		listItem *q = head;
+		while (q->next)
+			q = q->next;
+		p->next = q->next;
+		q->next = p;
+		length++;
+
+		/*
+		 }
+		 if (!head) {
+		 head = p;
+		 length =1;
+		 return;
+		 }
+
+		 else if (itemValue < head -> payload) {
+		 p -> next = head;
+		 head = p;
+		 }
+
+		 else {
+		 listItem *q = head;
+		 while ((q -> next) && (q -> next -> payload < itemValue))
+		 q = q -> next;
+		 p -> next = q -> next;
+		 q -> next = p;
+		 }
+		 */
+		//sumOfItems += itemValue;
+	}	//	void SortedList::InsertItem(long itemValue)
+}
+void tellerQueue::removeFirst(void) {
+	listItem *tmp = head->next;
+	delete head;
+	head = tmp;
+	//make teller action
+	length--;
+}
+void tellerQueue::printReverseList(void){
+	printLastItems(head);
+	std::cout << std::endl;
+}	// void SortedList::printReverseList(void)
+void tellerQueue::printLastItems(listItem *p){
+
+	if (p -> next)
+		printLastItems(p -> next);
+	std::cout << p -> payload << " ";
+}	// void SortedList::printLastItems(listItem *p)
+int tellerQueue::getLength(void) {
+	//for (listItem *p = head; p; p = p->next)
+	//	length += 1;
+
+	long checkSum = 0;
+	for (listItem *p = head; p; p = p->next)
+		checkSum += 1;
+	if (checkSum != length)
+		throw checkSum;
+
+	return length;
+}	// long SortedList::getSum(void)
+int tellerQueue::shortestQueue(tellerQueue *Qs){
+
+
+int shortest=0;
+int previousLength=Qs[0].getLength();
+	for(int i =0; i<sizeof(Qs)-3;i++){
+		std::cout << "cry" << std::endl;
+		if(Qs[i].getLength()<previousLength){
+			shortest=i;
+		}
+	}
+	return shortest;
+}

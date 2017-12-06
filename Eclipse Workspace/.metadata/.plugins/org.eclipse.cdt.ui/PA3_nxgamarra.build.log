@@ -1,0 +1,6 @@
+17:39:22 **** Clean-only build of configuration Default for project PA3_nxgamarra ****
+make clean 
+rm -f tree.o seed.o PA3
+
+17:39:23 Build Finished (took 267ms)
+

@@ -1,0 +1,7 @@
+//Board.c Niko Gamarra
+void PrintBoard((int width, int height, char **Old, char **New){
+	for(int y=0;y<height;y++){
+		for(int x = 0; x<width;x++)
+
+	}
+}

@@ -1,0 +1,112 @@
+//life.c -- Niko Gamarra
+#include <stdio.h>
+#include <stdlib.h>
+#include "Life.h"
+#include "Game.h"
+#include "Board.h"
+char print = 'n';
+char pause = 'n';
+int main(int argc, char * argv[]) {
+
+	if (argc < 5) {
+		printf("ERROR: Too few args.\n");
+	} else if (argc > 7) {
+		printf("ERROR: Too many args.\n");
+
+	} else {
+
+		//set up variables
+		int x, y, gens;
+		//printf(argc[0]);
+		x = atoi(argv[1]);
+		y = atoi(argv[2]);
+		gens = atoi(argv[3]);
+		if (argc > 5) {
+			print = atoi(argv[5]);
+			if (argc > 6) {
+				pause = atoi(argv[6]);
+			}
+		}
+		char **Old;
+		unsigned int i;
+		Old = malloc(x * sizeof(char *));
+		if (Old)
+			for (i = 0; i < x; i++) {
+				Old[i] = malloc(y * sizeof(char));
+				if (!Old[i]) {
+					exit(-1);
+					printf("Error: malloc error 1\n");
+				}
+			}
+
+		char **New;
+		New = malloc(x * sizeof(char *));
+		if (New)
+			for (i = 0; i < x; i++) {
+				New[i] = malloc(y * sizeof(char));
+				if (!New[i]) {
+					exit(-1);
+					printf("Error: malloc error 2\n");
+				}
+			}
+
+		ZeroBoard(x, y, New);
+		ZeroBoard(x, y, Old);
+
+		FILE *input;
+		input = (fopen(argv[4], "r"));
+		if (!input) {
+			printf("ERROR: File not found.");
+		} else {
+
+			// put txt into old
+			char ch = 0, charWidth=0, lines = 0;
+			do {
+
+				ch = fgetc(input);
+				if(ch=='o'||ch=='x')
+					charWidth++;
+				if (ch == '\n'){
+					lines++;
+
+				}
+			} while (ch != EOF);
+			lines--;
+			charWidth=charWidth/lines;
+
+			printf("%d", charWidth);
+
+			char tempArray[lines][charWidth];
+			ch=0;
+			do{
+				int q=0,z=0;
+				ch=fgetc(input);
+					if(ch=='o'||ch=='s'){
+						tempArray[q][z]=ch;
+						q++;
+
+					}else if (ch=='\n'){
+						q=0;
+						z++;
+					}
+
+			}while(ch!=EOF);
+		}
+		PlayGame(x, y, gens, Old, New);
+	}
+}
+
+int getPrint() {
+	if (print == 'y' || print == 'Y')
+		return 1;
+	else {
+		return 0;
+	}
+}
+int getPause() {
+	if (pause == 'y' || pause == 'Y')
+		return 1;
+	else {
+		return 0;
+	}
+}

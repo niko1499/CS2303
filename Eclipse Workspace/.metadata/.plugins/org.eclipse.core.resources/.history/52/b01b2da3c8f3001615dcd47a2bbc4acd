@@ -1,0 +1,117 @@
+#S-2303 HW4 Nikolas Gamarra
+
+CXXFLAGS = -g -Wall -fmessage-length=0
+
+OBJS =  PA5.o Rational.o 
+
+LIBS =
+
+TARGET = PA5
+
+$(TARGET):      $(OBJS)
+        $(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+
+*.o: *.cpp
+        $(CXX) -c $(CXXFLAGS) *.cpp
+
+all:    $(TARGET)
+
+clean:
+        rm -f $(OBJS) $(TARGET)
+
+
+CXXFLAGS = -g -Wall -fmessage-length=0
+
+OBJS =	qSim.o tellerQueue.o eventQueue.o
+
+LIBS =
+
+TARGET = qSim
+
+$(TARGET):	$(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+
+*.o: *.cpp
+	$(CXX) -c $(CXXFLAGS) *.cpp
+
+all:	$(TARGET)
+
+clean:
+S-2303 HW4 Nikolas Gamarra
+
+CXXFLAGS = -g -Wall -fmessage-length=0
+
+OBJS =  PA5.o Rational.o 
+
+LIBS =
+
+TARGET = PA5
+
+$(TARGET):      $(OBJS)
+        $(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+
+*.o: *.cpp
+        $(CXX) -c $(CXXFLAGS) *.cpp
+
+all:    $(TARGET)
+
+clean:
+        rm -f $(OBJS) $(TARGET)
+S-2303 HW4 Nikolas Gamarra
+
+CXXFLAGS = -g -Wall -fmessage-length=0
+
+OBJS =  PA5.o Rational.o 
+
+LIBS =
+
+TARGET = PA5
+
+$(TARGET):      $(OBJS)
+        $(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+
+*.o: *.cpp
+        $(CXX) -c $(CXXFLAGS) *.cpp
+
+all:    $(TARGET)
+
+clean:
+        rm -f $(OBJS) $(TARGET)
+S-2303 HW4 Nikolas Gamarra
+
+CXXFLAGS = -g -Wall -fmessage-length=0
+
+OBJS =  PA5.o Rational.o 
+
+LIBS =
+
+TARGET = PA5
+
+$(TARGET):      $(OBJS)
+        $(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+
+*.o: *.cpp
+        $(CXX) -c $(CXXFLAGS) *.cpp
+
+all:    $(TARGET)
+S-2303 HW4 Nikolas Gamarra
+
+CXXFLAGS = -g -Wall -fmessage-length=0
+
+OBJS =  PA5.o Rational.o 
+
+LIBS =
+
+TARGET = PA5
+
+$(TARGET):      $(OBJS)
+        $(CXX) $(CXXFLAGS) -o $(TARGET) $(OBJS) $(LIBS)
+
+*.o: *.cpp
+        $(CXX) -c $(CXXFLAGS) *.cpp
+
+all:    $(TARGET)
+
+clean:
+        rm -f $(OBJS) $(TARGET)
+
